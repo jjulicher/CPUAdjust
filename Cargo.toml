@@ -1,0 +1,10 @@
+[package]
+name = "cpu-adjust"
+version = "0.1.0"
+edition = "2021"
+description = "AMD Ryzen 7000 (Raphael) SMU Curve Optimizer, PBO, AMD P-State, & iGPU DPM control daemon, GUI, Web UI, and CLI"
+license = "GPL-2.0-only"
+
+[[bin]]
+name = "cpu-adjust"
+path = "src/main.rs"
