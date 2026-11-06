@@ -1,0 +1,22 @@
+[Desktop Entry]
+Name=CPUAdjust
+GenericName=AMD Ryzen SMU & Curve Optimizer Control
+Comment=CoolerControl-style AMD Ryzen 7000 Curve Optimizer, PBO & Thermal Control GUI
+Exec=/usr/local/bin/cpu-adjust gui
+Icon=/opt/projects/CPUAdjust/assets/cpu-adjust.png
+Terminal=false
+Type=Application
+Categories=System;Settings;HardwareSettings;Monitor;
+Keywords=AMD;Ryzen;SMU;PBO;Curve Optimizer;Undervolt;Thermal;CoolerControl;
+StartupNotify=true
+StartupWMClass=cpu-adjust
+Actions=WebUI;LargeScale;
+
+[Desktop Action WebUI]
+Name=Open CPUAdjust Web Dashboard (127.0.0.1:11988)
+Exec=/usr/local/bin/cpu-adjust gui --web
+
+[Desktop Action LargeScale]
+Name=Open CPUAdjust Native GUI (3x HiDPI Scale)
+Exec=/usr/local/bin/cpu-adjust gui --scale 3.0
+
