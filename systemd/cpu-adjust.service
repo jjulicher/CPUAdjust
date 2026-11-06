@@ -1,0 +1,18 @@
+[Unit]
+Description=CPUAdjust — AMD Ryzen 7000 SMU Curve Optimizer & Thermal Startup Daemon
+Documentation=file:///opt/projects/CPUAdjust/README.md
+After=local-fs.target systemd-modules-load.service
+Before=multi-user.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/projects/CPUAdjust
+ExecStart=/opt/projects/CPUAdjust/target/release/cpu-adjust --config /opt/projects/CPUAdjust/config.toml daemon
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

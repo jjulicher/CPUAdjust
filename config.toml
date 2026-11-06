@@ -1,0 +1,24 @@
+# CPUAdjust Configuration — AMD Ryzen 7 7700X (Raphael)
+# Automatically applied on system startup by cpu-adjust.service
+
+[limits]
+tctl_max_c = 90
+# ppt_limit_w = 142
+tdc_limit_a = 120
+edc_limit_a = 169
+poll_interval_secs = 60
+
+[curve_optimizer]
+# Per-Core Curve Optimizer offsets (counts, ~3-5mV per count; negative = undervolt)
+# CPPC Preferred Core Rankings on this Ryzen 7 7700X:
+#   Core 4 (196 - Gold #1), Core 6 (196 - Gold #1), Core 0 (191 - Silver #3)
+#   Core 7 (186 - #4), Core 2 (181 - #5), Core 5 (176 - #6), Core 3 (171 - #7), Core 1 (166 - #8)
+core_offsets = [-17, -23, -23, -23, -12, -23, -12, -23]
+core_0 = -17
+core_1 = -23
+core_2 = -23
+core_3 = -23
+core_4 = -12
+core_5 = -23
+core_6 = -12
+core_7 = -23
